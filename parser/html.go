@@ -201,6 +201,9 @@ func (h *HTMLSourceParser) print(ctx context.Context, req requester.Request) ([]
 					MarginRight:  marginArr[1],
 					MarginBottom: marginArr[2],
 					MarginLeft:   marginArr[3],
+					DisplayHeaderFooter: true,
+				    HeaderTemplate: `<div style="font-size:8px;width:100%;text-align:center;"><span class="title"></span> -- <span class="url"></span></div>`,
+				    FooterTemplate: `<div style="font-size:8px;width:100%;text-align:center;">(<span class="pageNumber"></span> / <span class="totalPages"></span>)</div>`,
 				}
 
 				// 获取pdf字节数组
